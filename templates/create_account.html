@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<link href="{{ url_for('static', filename='css/login.css')}}" rel="stylesheet">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="#" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form action="/create_account" method="POST">
+      <input type="text" class="fadeIn second" name="Nombres" placeholder="Nombres">
+      <input type="text" class="fadeIn second" name="Apellidos" placeholder="Apellidos">
+      <input type="text" class="fadeIn second" name="Email" placeholder="Email">
+      <input type="text" class="fadeIn third" name="Contraseña" placeholder="Contraseña">
+      <input type="submit" class="fadeIn fourth" value="Crear cuenta">
+    </form>
+
+
+    <div id="formFooter">
+      <a class="underLineHover" href="{{ url_for('signin') }}">¿tienes una cuenta? Inicia sesión</a>
+    </div>
+
+  </div>
+</div>
+<br>
+<br>
+{% endblock %}
